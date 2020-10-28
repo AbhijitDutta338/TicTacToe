@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tictactoe/GameButton.dart';
 import 'package:tictactoe/custom_dialog.dart';
+import 'minmax.dart';
 
 class Game extends StatefulWidget {
   @override
@@ -48,12 +49,8 @@ class _GameState extends State<Game> {
               "Press reset button to start again.", resetGame));
       return;
     }
-    var inp;
-    for (inp = 0; inp < 9; inp++) {
-      if (buttonsList[inp].enabled) {
-        break;
-      }
-    }
+    var inp = compPlay(buttonsList);
+
     buttonsList[inp].bg = Colors.black;
     buttonsList[inp].text = "0";
     buttonsList[inp].enabled = false;
