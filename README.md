@@ -1,4 +1,3 @@
 # tictactoe
 
-An Unbeatable tic tac toe application in flutter!
-AI uses minmax algorithm(Game Theory) to find optimal moves.
+An Unbeatable Tic-Tac-Toe app using minmax algorithm(Game Theory) and Flutter.
